@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <title>Login Page</title>
+</head>
+<body>
+    <section class="front">
+        <div id= "pop-up" class="pop-up">
+            <h2>File Upload</h2>
+            <p>Please upload your resume here</p>
+            <input type = "file">
+            <a onclick = "toggle()">Submit</a> 
+
+        </div>
+        <div id= "pop-up2" class="pop-up typed">
+            
+           <h2 style="text-align: center; margin-bottom: 20px;">Sign in</h2>
+            <a onclick="window.location='hybernate.html';" style="width:70%;margin:15px;padding:20px;">Hibernate</a> 
+            <a onclick="window.location='products.html';" style="margin-left:140px;padding:20px;">Careers</a> 
+        
+        </div>
+        <div id= "pop-up1" class="pop-up">
+            <form>
+                <h2 style="text-align:center;">Company details</h2>
+                
+                <table>
+                  
+            
+                     <tr>
+                        <td>company</td>
+                        <td><input type = "text" placeholder="enter your company name"></td>
+                    </tr>
+                    <tr>
+                        <td>Job Title</td>
+                        <td><input type = "text" placeholder="enter your job title"></td>
+                    </tr>
+                   
+                </table>
+                              
+            </form>
+            
+            <a onclick = "toggle1()">Submit</a> 
+
+        </div>
+        <!--Mobile show case
+        -->
+        <div class="simba">
+            <div class="disp">
+                <img src="mscre.png" class="scredhe">
+            </div>
+        </div>
+        <!--2nd-->
+
+        <div class="center">
+            <div class="mobile">
+                <div class="screen">
+                    <img src="yibe.png" class="dk">
+                </div>
+                <div class="home" onclick="window.location='../YibeContent-main/index.html';">
+                </div>
+                <div class="inner"></div>
+                <ul class="volume">
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="silent">
+                    <li></li>
+                </ul>
+                <ul class="sleep">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Login form-->
+        <div class="f-box">
+            <div class="headi"><h1>Yibe</h1></div>
+            <div class="button">
+                <div id="btn"></div>
+                <button type="button" class="togg-btn" onclick="login()">Sign In</button>
+                <button type="button" class="togg-btn" onclick="register()">Sign Up</button>
+            </div>
+            <div class="ico">
+                <img src="fb.png">
+                <img src="tw.png">
+                <img src="gp.png">
+            </div>
+
+            <form id="login" class="input-group">
+                <input type="text" class="field" placeholder="User Id" required>
+                <input type="text" class="field" placeholder="Enter Password" required>
+                <input type="checkbox" class="c-box"><span>Remember Password</span>
+                <button onclick="toggle2()" class="sub-btn">Sign In</button>  
+            </form>
+            <form id="register" class="input-group">
+                <input type="Email" class="field" placeholder="Email Id" required>
+                <select  id = "dp" style="width:100%; padding:10px;">
+                    <option>---Select---</option>
+                    <option value="rc">Recruiter</option>
+                    sss
+                    <option value="st">Student</option>                </select>
+                <input type="text" class="field" placeholder="Enter Password" required>
+                <input type="checkbox" class="c-box"><span>I agree to terms and Conditions</span>
+                <button id ="btn1" type="submit" onclick="toggle()" class="sub-btn">Sign Up</button>    
+            </form>
+        </div>
+        
+    </section>
+    
+
+    <script>
+        function fun(){
+            window.location="products.html";
+        }
+        var x=document.getElementById("login");
+        var y=document.getElementById("register");
+        var z=document.getElementById("btn");
+
+        function register(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0px";
+        }
+        
+        function toggle(){
+            var p=document.getElementById("pop-up");
+            p.classList.toggle('active');
+            
+        }
+        function toggle1(){
+            var p=document.getElementById("pop-up1");
+            p.classList.toggle('active');
+            
+        }
+        function toggle2(){
+            var p=document.getElementById("pop-up2");
+            p.classList.toggle('active');
+            
+        }
+        
+       </script>
+    <script>
+        const ele=document.getElementById("dp");
+        ele.addEventListener("change", (e) => {
+        const value = e.target.value;
+          const text = ele.options[ele.selectedIndex].text;
+          
+        if(text == 'Recruiter'){
+            document.getElementById("btn1").setAttribute('onclick','toggle1()');
+
+        }
+        else {
+            document.getElementById("btn1").setAttribute('onclick','toggle()');
+        }
+       
+         
+        }
+        
+         );
+
+
+    </script>
+</body>
+</html>

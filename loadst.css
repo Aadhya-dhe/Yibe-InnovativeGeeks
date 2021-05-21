@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+#svg1{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    top:50%;
+    left:50%;
+    height:300px;
+    width:300px;
+    border-radius: 50%;
+    padding:15px;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    box-shadow:inset 0 0 15px rgba(255, 255, 255, 0.8);
+    animation: load3 4s ease forwards infinite;
+}
+
+
+
+section{
+    height: 100vh;
+
+    background: #1c1c1c;
+}
+
+@keyframes load3{
+    0%{
+        opacity: 1;
+        visibility: hidden;
+        box-shadow: 0 0 5px 5px #0cb0cb;
+    }
+    40%{
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 0 5px 5px #ffffff5d;
+        
+    }
+    60%{
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 0 5px 5px #0cb0cb;
+        
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 0 5px 5px #ffffff5d;
+        
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 0 5px 5px #0cb0cb;
+        
+    }
+}
+
+
+#yibesvg{
+    animation:yi 4s infinite;
+}
+@keyframes yi{
+    0%{
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: rotateY(60deg);
+        opacity: 0;
+        
+    }
+    60%{
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: rotateY(60deg);
+        opacity: 0;
+        
+    }
+}
+#yibeY{
+    animation:yib 4s infinite;
+}
+@keyframes yib{
+    0%{
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+        transform: rotateY(-70deg);
+    }
+    60%{
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+        transform: rotateY(-70deg);
+    }
+}
+#yibesvgcir{
+    animation:yibg 4s infinite;
+}
+@keyframes yibg{
+    0%{
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+        transform: rotateY(180deg);
+    }
+    60%{
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+        transform: rotateY(180deg);
+    }
+}
